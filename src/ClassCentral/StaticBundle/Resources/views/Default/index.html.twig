@@ -1,0 +1,121 @@
+{% extends 'ClassCentralStaticBundle::base.html.twig' %}
+
+{%  block content %}
+      <div class="hero-unit">
+        <h1>Class Central</h1>
+        <p>Summary of Standford's online course offerings</p>
+        <!-- <p><a class="btn primary large">Learn more &raquo;</a></p> -->
+      </div>
+    	
+	<h1>Ongoing courses</h1> 	  
+	<table class="zebra-striped">	 
+		<thead>
+			<tr>
+				<th>Course Name</th>
+				<th>Instructor(s)</th>
+				<th>Start Date</th>			            
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://www.ai-class.com/">Introduction to Artificial Intelligence</a></td>
+				<td>Sebastian Thrun and Peter Norvig</td>
+				<td>October 2011</td>
+			   
+			</tr>
+			<tr>
+				<td><a href="http://www.ml-class.org/">Introduction to Machine Learning</a></td>
+				<td>Jennifer Widom</td>
+				<td>October 2011</td>
+				
+			</tr>
+			<tr>
+				<td><a href="http://www.db-class.org/">Introduction to Databases</a></td>
+				<td>Andrew Ng</td>
+				<td>October 2011</td>         
+			</tr>
+		</tbody>
+	</table>
+	
+	
+	<h1>Future offerings</h1> 	  
+	<table class="zebra-striped">	 
+		<thead>
+			<tr>
+				<th>Course Name</th>
+				<th>Instructor(s)</th>
+				<th>Start Date</th>			            
+			</tr>
+		</thead>
+		<tbody>
+		
+			<tr>
+				<td><a href="http://www.cs101-class.org/">CS 101</a></td>
+				<td>Nick Parlante</td>
+				<td>February 2012</td>			   
+			</tr>	
+			
+			
+			<tr>
+				<td><a href="http://jan2012.ml-class.org/">Machine Learning </a></td>
+				<td>Andrew Ng</td>
+				<td>January 2012</td>			   
+			</tr>	
+			
+			<tr>
+				<td><a href="http://www.saas-class.org/">Software as a Service </a></td>
+				<td>Armando Fox and David Patterson</td>
+				<td>February 2012</td>			   
+			</tr>	
+			
+			<tr>
+				<td><a href="http://www.hci-class.org/">Human-Computer Interaction </a></td>
+				<td>Scott Klemmer</td>
+				<td>January 2012</td>			   
+			</tr>	
+			
+			<tr>
+				<td><a href="http://www.nlp-class.org/">Natural Language Processing </a></td>
+				<td>Chris Manning and Dan Jurafsky</td>
+				<td>January 2012</td>			   
+			</tr>	
+			
+			<tr>
+				<td><a href="http://www.game-theory-class.org/">Game Theory</a></td>
+				<td>Matthew Jackson and Yoav Shoham</td>
+				<td>January 2012</td>			   
+			</tr>	
+			
+			<tr>
+				<td><a href="http://www.pgm-class.org/">Probabilistic Graphical Models </a></td>
+				<td>Daphne Koller</td>
+				<td>January 2012</td>			   
+			</tr>	
+			
+			<tr>
+				<td><a href="http://www.crypto-class.org/">Cryptography </a></td>
+				<td>Dan Boneh</td>
+				<td>January 2012</td>			   
+			</tr>	
+			
+			<tr>
+				<td><a href="http://www.algo-class.org/">Design and Analysis of Algorithms I</a></td>
+				<td>Tim Roughgarden</td>
+				<td>January 2012</td>			   
+			</tr>	
+			
+			<tr>
+				<td><a href="http://www.launchpad-class.org/">Lean Launchpad </a></td>
+				<td>Steve Blank</td>
+				<td>February 2012</td>			   
+			</tr>	
+			<tr>
+				<td><a href="http://www.venture-class.org/">Technology Entrepreneurship</a></td>
+				<td>Chuck Eesley</td>
+				<td>January 2012</td>			   
+			</tr>	
+			
+		</tbody>
+	</table>
+      
+      {% endblock %}  

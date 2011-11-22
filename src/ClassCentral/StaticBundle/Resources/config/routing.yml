@@ -1,0 +1,3 @@
+ClassCentralStaticBundle_homepage:
+    pattern:  /
+    defaults: { _controller: ClassCentralStaticBundle:Default:index }
