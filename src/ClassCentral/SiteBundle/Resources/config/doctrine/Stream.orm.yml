@@ -1,0 +1,13 @@
+ClassCentral\SiteBundle\Entity\Stream:
+  type: entity
+  table: streams
+  id:
+    id:
+      type: integer     
+      generator:
+        strategy: AUTO
+  fields:
+    name:
+      type: string
+      length: 255   
+  lifecycleCallbacks: {  }

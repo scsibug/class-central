@@ -1,0 +1,16 @@
+ClassCentral\SiteBundle\Entity\Instructor:
+  type: entity
+  table: instructors
+  fields:
+    id:
+      type: integer
+      id: true
+      generator:
+        strategy: AUTO
+    name:
+      type: string
+      length: 100
+    homepage:
+      type: string
+      length: 255
+  lifecycleCallbacks: {  }

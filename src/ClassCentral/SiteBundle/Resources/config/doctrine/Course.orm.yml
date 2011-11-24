@@ -1,0 +1,25 @@
+ClassCentral\SiteBundle\Entity\Course:
+  type: entity
+  table: courses
+  fields:
+    id:
+      type: integer
+      id: true
+      generator:
+        strategy: AUTO
+    name:
+      type: string
+      length: 100
+    start_date: 
+      type: date      
+    exact_date_known: 
+      type: boolean
+    stream_id:
+       type: int
+  oneToOne:
+    stream:
+      targetEntity: Stream
+      joinColumn:
+        name: stream_id
+        referencedColumnName: id     
+  lifecycleCallbacks: {  }
