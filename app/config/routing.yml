@@ -1,3 +1,7 @@
+ClassCentralSiteBundle:
+    resource: "@ClassCentralSiteBundle/Resources/config/routing.yml"
+    prefix:   /
+
 ClassCentralStaticBundle:
     resource: "@ClassCentralStaticBundle/Resources/config/routing.yml"
     prefix:   /
