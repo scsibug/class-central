@@ -3,14 +3,18 @@ ClassCentral\SiteBundle\Entity\Instructor:
   table: instructors
   fields:
     id:
-      type: integer
       id: true
+      type: integer
+      unsigned: false
+      nullable: false
       generator:
-        strategy: AUTO
+        strategy: IDENTITY
     name:
       type: string
       length: 100
+      fixed: false
+      nullable: false
     homepage:
-      type: string
-      length: 255
+      type: text
+      nullable: true
   lifecycleCallbacks: {  }

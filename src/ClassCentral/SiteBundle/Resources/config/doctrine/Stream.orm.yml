@@ -1,13 +1,17 @@
 ClassCentral\SiteBundle\Entity\Stream:
   type: entity
   table: streams
-  id:
-    id:
-      type: integer     
-      generator:
-        strategy: AUTO
   fields:
+    id:
+      id: true
+      type: integer
+      unsigned: false
+      nullable: false
+      generator:
+        strategy: IDENTITY
     name:
       type: string
-      length: 255   
+      length: 255
+      fixed: false
+      nullable: true
   lifecycleCallbacks: {  }

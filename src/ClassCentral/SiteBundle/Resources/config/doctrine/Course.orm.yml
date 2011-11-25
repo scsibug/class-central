@@ -3,23 +3,36 @@ ClassCentral\SiteBundle\Entity\Course:
   table: courses
   fields:
     id:
-      type: integer
       id: true
+      type: integer
+      unsigned: false
+      nullable: false
       generator:
-        strategy: AUTO
+        strategy: IDENTITY
     name:
       type: string
-      length: 100
-    start_date: 
-      type: date      
-    exact_date_known: 
-      type: boolean
-    stream_id:
-       type: int
-  oneToOne:
+      length: 255
+      fixed: false
+      nullable: false
+  ManyToOne:
     stream:
       targetEntity: Stream
-      joinColumn:
-        name: stream_id
-        referencedColumnName: id     
+      cascade: {  }
+      mappedBy: null
+      inversedBy: null
+      joinColumns:
+        stream_id:
+          referencedColumnName: id
+      orphanRemoval: false
+  ManyToMany:
+    instructors:
+      targetEntity: Stream
+      join_table: 
+        name: courses_instructors
+        joinColumns:
+          course_id:
+             referencedColumnName: id
+        inverseJoinColumns:
+          instructor_id:
+            referencedColumnName: id
   lifecycleCallbacks: {  }

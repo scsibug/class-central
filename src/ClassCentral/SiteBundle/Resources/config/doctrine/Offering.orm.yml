@@ -1,0 +1,40 @@
+ClassCentral\SiteBundle\Entity\Offering:
+  type: entity
+  table: offerings
+  fields:
+    id:
+      id: true
+      type: integer
+      unsigned: false
+      nullable: false
+      generator:
+        strategy: IDENTITY
+    startDate:
+      type: date
+      nullable: true
+      column: start_date
+    endDate:
+      type: date
+      nullable: true
+      column: end_date
+    exactDatesKnow:
+      type: boolean
+      nullable: true
+      column: exact_dates_know
+    created:
+      type: datetime
+      nullable: true
+    modified:
+      type: datetime
+      nullable: false
+  ManyToOne:
+    course:
+      targetEntity: Courses
+      cascade: {  }
+      mappedBy: null
+      inversedBy: null
+      joinColumns:
+        course_id:
+          referencedColumnName: id
+      orphanRemoval: false
+  lifecycleCallbacks: {  }
