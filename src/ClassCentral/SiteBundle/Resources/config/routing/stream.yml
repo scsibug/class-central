@@ -1,0 +1,30 @@
+stream:
+    pattern:  /
+    defaults: { _controller: "ClassCentralSiteBundle:Stream:index" }
+
+stream_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "ClassCentralSiteBundle:Stream:show" }
+
+stream_new:
+    pattern:  /new
+    defaults: { _controller: "ClassCentralSiteBundle:Stream:new" }
+
+stream_create:
+    pattern:  /create
+    defaults: { _controller: "ClassCentralSiteBundle:Stream:create" }
+    requirements: { _method: post }
+
+stream_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "ClassCentralSiteBundle:Stream:edit" }
+
+stream_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "ClassCentralSiteBundle:Stream:update" }
+    requirements: { _method: post }
+
+stream_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "ClassCentralSiteBundle:Stream:delete" }
+    requirements: { _method: post }

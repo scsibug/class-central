@@ -1,0 +1,15 @@
+ClassCentralSiteBundle_instructor:
+    resource: "@ClassCentralSiteBundle/Resources/config/routing/instructor.yml"
+    prefix: /instructor
+    
+ClassCentralSiteBundle_stream:
+    resource: "@ClassCentralSiteBundle/Resources/config/routing/stream.yml"
+    prefix: /stream    
+    
+ClassCentralSiteBundle_course:
+    resource: "@ClassCentralSiteBundle/Resources/config/routing/course.yml"
+    prefix: /course  
+           
+ClassCentralSiteBundle_offering:
+    resource: "@ClassCentralSiteBundle/Resources/config/routing/offering.yml"
+    prefix: /offering       

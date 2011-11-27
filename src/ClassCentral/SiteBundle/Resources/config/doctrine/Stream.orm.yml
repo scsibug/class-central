@@ -8,10 +8,16 @@ ClassCentral\SiteBundle\Entity\Stream:
       unsigned: false
       nullable: false
       generator:
-        strategy: IDENTITY
+        strategy: AUTO
     name:
       type: string
       length: 255
       fixed: false
       nullable: true
+  oneToMany:
+    courses:
+      targetEntity: Course
+      cascade: {  }
+      mappedBy: stream      
+      orphanRemoval: false    
   lifecycleCallbacks: {  }

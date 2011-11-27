@@ -1,3 +1,4 @@
 ClassCentralSiteBundle_homepage:
-    pattern:  /hello/{name}
+    pattern:  /
     defaults: { _controller: ClassCentralSiteBundle:Default:index }
+    

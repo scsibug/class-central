@@ -16,5 +16,9 @@ ClassCentral\SiteBundle\Entity\Instructor:
       nullable: false
     homepage:
       type: text
-      nullable: true
+      nullable: true  
+  manyToMany:
+    courses:
+      targetEntity: Course
+      mappedBy: instructors           
   lifecycleCallbacks: {  }

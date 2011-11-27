@@ -26,15 +26,14 @@ ClassCentral\SiteBundle\Entity\Offering:
       nullable: true
     modified:
       type: datetime
-      nullable: false
-  ManyToOne:
+      nullable: false   
+    url:
+      type: text
+  manyToOne:
     course:
-      targetEntity: Courses
+      targetEntity: Course
       cascade: {  }
       mappedBy: null
-      inversedBy: null
-      joinColumns:
-        course_id:
-          referencedColumnName: id
+      inversedBy: offerings      
       orphanRemoval: false
   lifecycleCallbacks: {  }

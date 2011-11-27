@@ -52,6 +52,7 @@ CREATE  TABLE IF NOT EXISTS `offerings` (
   `exact_dates_know` TINYINT(1)  NULL ,
   `created` TIMESTAMP NULL ,
   `modified` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
+  `url` TEXT NULL ,
   PRIMARY KEY (`id`) ,
   INDEX `offerings.course_id` (`course_id` ASC) ,
   CONSTRAINT `offerings.course_id`

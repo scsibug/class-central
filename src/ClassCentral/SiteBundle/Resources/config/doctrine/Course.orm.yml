@@ -8,31 +8,38 @@ ClassCentral\SiteBundle\Entity\Course:
       unsigned: false
       nullable: false
       generator:
-        strategy: IDENTITY
+        strategy: AUTO
     name:
       type: string
       length: 255
       fixed: false
-      nullable: false
-  ManyToOne:
+      nullable: false   
+  manyToOne:
     stream:
       targetEntity: Stream
-      cascade: {  }
-      mappedBy: null
-      inversedBy: null
+      cascade: {  }      
+      inversedBy: courses
       joinColumns:
         stream_id:
           referencedColumnName: id
       orphanRemoval: false
-  ManyToMany:
+  manyToMany:
     instructors:
-      targetEntity: Stream
-      join_table: 
-        name: courses_instructors
+      targetEntity: Instructor
+      inversedBy: courses
+      joinTable: 
+        name: courses_instructors 
         joinColumns:
           course_id:
-             referencedColumnName: id
+            referencedColumnName: id
         inverseJoinColumns:
           instructor_id:
             referencedColumnName: id
+  oneToMany:
+    offerings:
+      targetEntity: Offering
+      cascade: {  }
+      mappedBy: course
+      inversedBy: null    
+      orphanRemoval: false         
   lifecycleCallbacks: {  }

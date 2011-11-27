@@ -1,0 +1,33 @@
+<table class="zebra-striped" id='{{ tableId}}'>	 
+    <thead>
+        <tr>
+            <th>Course Name</th>
+            <th>Instructor(s)</th>
+            <th>Stream</th>
+            <th>Start Date</th>			            
+        </tr>
+    </thead>
+    <tbody>
+        {% for offering in offerings %}
+        <tr>
+            <td><a href="{{ offering.getUrl() }}">{{ offering.getCourse().getName()}}</a></td>
+            <td>
+                    {% set i = 0 %}   
+                    {% for instructor in offering.getCourse().getInstructors() %}
+                    {% if i > 0 %}
+                        <br />{{ instructor.getName() }}
+                    {% else %}
+                        {{ instructor.getName() }}
+                    {% endif %}
+                    {% set i = i + 1 %}
+                    {% endfor %}
+              
+            </td>
+            <td> {{ offering.getCourse().getStream().getName() }} </td>
+            <td>{{ offering.getFormattedStartDate() }}</td>
+
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>

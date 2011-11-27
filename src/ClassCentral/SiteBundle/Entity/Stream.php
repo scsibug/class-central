@@ -28,8 +28,13 @@ class Stream
      * @var string $name
      */
     private $name;
+    
+    
+    private $courses = null;
 
-
+    public function __construct() {
+        $this->courses = new \Doctrine\Common\Collections\ArrayCollection();
+    }
     /**
      * Set name
      *
@@ -49,4 +54,17 @@ class Stream
     {
         return $this->name;
     }
+    
+    public function __toString() {
+        return $this->getName();
+    }
+    
+    public function getCourses(){
+        return $this->courses;
+    }
+    
+    public function setCourses($course){
+        $this->courses[] = $course;           
+    }
+      
 }

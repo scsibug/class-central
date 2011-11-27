@@ -1,0 +1,30 @@
+offering:
+    pattern:  /
+    defaults: { _controller: "ClassCentralSiteBundle:Offering:index" }
+
+offering_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "ClassCentralSiteBundle:Offering:show" }
+
+offering_new:
+    pattern:  /new
+    defaults: { _controller: "ClassCentralSiteBundle:Offering:new" }
+
+offering_create:
+    pattern:  /create
+    defaults: { _controller: "ClassCentralSiteBundle:Offering:create" }
+    requirements: { _method: post }
+
+offering_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "ClassCentralSiteBundle:Offering:edit" }
+
+offering_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "ClassCentralSiteBundle:Offering:update" }
+    requirements: { _method: post }
+
+offering_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "ClassCentralSiteBundle:Offering:delete" }
+    requirements: { _method: post }

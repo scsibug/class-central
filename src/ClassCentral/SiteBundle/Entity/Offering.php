@@ -3,12 +3,13 @@
 namespace ClassCentral\SiteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * ClassCentral\SiteBundle\Entity\Offering
  */
-class Offering
-{
+class Offering {
+
     /**
      * @var integer $id
      */
@@ -39,14 +40,23 @@ class Offering
      */
     private $modified;
 
+    /**
+     * @var ClassCentral\SiteBundle\Entity\Course
+     */
+    private $course;
+    
+    /**
+     *
+     * @var string $url
+     */
+    private $url;
 
     /**
      * Get id
      *
      * @return integer 
      */
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
     }
 
@@ -55,8 +65,7 @@ class Offering
      *
      * @param date $startDate
      */
-    public function setStartDate($startDate)
-    {
+    public function setStartDate($startDate) {
         $this->startDate = $startDate;
     }
 
@@ -65,8 +74,7 @@ class Offering
      *
      * @return date 
      */
-    public function getStartDate()
-    {
+    public function getStartDate() {
         return $this->startDate;
     }
 
@@ -75,8 +83,7 @@ class Offering
      *
      * @param date $endDate
      */
-    public function setEndDate($endDate)
-    {
+    public function setEndDate($endDate) {
         $this->endDate = $endDate;
     }
 
@@ -85,8 +92,7 @@ class Offering
      *
      * @return date 
      */
-    public function getEndDate()
-    {
+    public function getEndDate() {
         return $this->endDate;
     }
 
@@ -95,8 +101,7 @@ class Offering
      *
      * @param boolean $exactDatesKnow
      */
-    public function setExactDatesKnow($exactDatesKnow)
-    {
+    public function setExactDatesKnow($exactDatesKnow) {
         $this->exactDatesKnow = $exactDatesKnow;
     }
 
@@ -105,8 +110,7 @@ class Offering
      *
      * @return boolean 
      */
-    public function getExactDatesKnow()
-    {
+    public function getExactDatesKnow() {
         return $this->exactDatesKnow;
     }
 
@@ -115,8 +119,7 @@ class Offering
      *
      * @param datetime $created
      */
-    public function setCreated($created)
-    {
+    public function setCreated($created) {
         $this->created = $created;
     }
 
@@ -125,8 +128,7 @@ class Offering
      *
      * @return datetime 
      */
-    public function getCreated()
-    {
+    public function getCreated() {
         return $this->created;
     }
 
@@ -135,8 +137,7 @@ class Offering
      *
      * @param datetime $modified
      */
-    public function setModified($modified)
-    {
+    public function setModified($modified) {
         $this->modified = $modified;
     }
 
@@ -145,8 +146,48 @@ class Offering
      *
      * @return datetime 
      */
-    public function getModified()
-    {
+    public function getModified() {
         return $this->modified;
     }
+
+    /**
+     * Set course
+     *
+     * @param ClassCentral\SiteBundle\Entity\Course $course
+     */
+    public function setCourse(\ClassCentral\SiteBundle\Entity\Course $course) {
+        $this->course = $course;
+    }
+
+    /**
+     * Get course
+     *
+     * @return ClassCentral\SiteBundle\Entity\Course 
+     */
+    public function getCourse() {
+        return $this->course;
+    }
+
+    public function __construct() {
+        $this->instructors = new ArrayCollection();
+    }
+
+    public function getFormattedStartDate() {
+        if ($this->getExactDatesKnow()) {
+            $format = 'jS M, Y';
+        } else {
+            $format = 'M, Y';
+        }
+        
+        return $this->getStartDate()->format($format);
+    }
+    
+    public function getUrl(){
+        return $this->url;        
+    }
+    
+    public function setUrl($url){
+        $this->url = $url;
+    }
+
 }

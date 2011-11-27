@@ -33,8 +33,13 @@ class Instructor
      * @var string $homepage
      */
     private $homepage;
-
-
+    
+    private $courses;
+    
+    
+    public function __construct() {        
+        $this->courses = new \Doctrine\Common\Collections\ArrayCollection();
+    }
     /**
      * Set name
      *
@@ -74,4 +79,14 @@ class Instructor
     {
         return $this->homepage;
     }
+    
+    public function getCourses(){
+        return $this->getCourses();                
+    }
+    
+     public function __toString() {
+        return $this->getName();
+    }
+            
+    
 }

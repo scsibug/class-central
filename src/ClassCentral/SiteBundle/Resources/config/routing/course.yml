@@ -1,0 +1,30 @@
+course:
+    pattern:  /
+    defaults: { _controller: "ClassCentralSiteBundle:Course:index" }
+
+course_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "ClassCentralSiteBundle:Course:show" }
+
+course_new:
+    pattern:  /new
+    defaults: { _controller: "ClassCentralSiteBundle:Course:new" }
+
+course_create:
+    pattern:  /create
+    defaults: { _controller: "ClassCentralSiteBundle:Course:create" }
+    requirements: { _method: post }
+
+course_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "ClassCentralSiteBundle:Course:edit" }
+
+course_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "ClassCentralSiteBundle:Course:update" }
+    requirements: { _method: post }
+
+course_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "ClassCentralSiteBundle:Course:delete" }
+    requirements: { _method: post }

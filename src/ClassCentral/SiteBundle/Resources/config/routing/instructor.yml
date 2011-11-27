@@ -1,0 +1,30 @@
+instructor:
+    pattern:  /
+    defaults: { _controller: "ClassCentralSiteBundle:Instructor:index" }
+
+instructor_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "ClassCentralSiteBundle:Instructor:show" }
+
+instructor_new:
+    pattern:  /new
+    defaults: { _controller: "ClassCentralSiteBundle:Instructor:new" }
+
+instructor_create:
+    pattern:  /create
+    defaults: { _controller: "ClassCentralSiteBundle:Instructor:create" }
+    requirements: { _method: post }
+
+instructor_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "ClassCentralSiteBundle:Instructor:edit" }
+
+instructor_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "ClassCentralSiteBundle:Instructor:update" }
+    requirements: { _method: post }
+
+instructor_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "ClassCentralSiteBundle:Instructor:delete" }
+    requirements: { _method: post }

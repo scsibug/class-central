@@ -1,6 +1,11 @@
+#ClassCentralStaticBundle:
+#    resource: "@ClassCentralStaticBundle/Resources/config/routing.yml"
+#    prefix:   /
+
 ClassCentralSiteBundle:
     resource: "@ClassCentralSiteBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix: /
+     
 
 # Internal routing configuration to handle ESI
 #_internal:

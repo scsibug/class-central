@@ -17,7 +17,9 @@ class Version20111124063306 extends AbstractMigration {
         // Read SQL queries from the file
         $sql = file_get_contents('sql/init.sql',FILE_USE_INCLUDE_PATH);
         $this->addSql($sql);
-      
+        
+        $sql = file_get_contents('sql/init.data.sql',FILE_USE_INCLUDE_PATH);
+        $this->addSql($sql);
     }
 
     public function down(Schema $schema) {

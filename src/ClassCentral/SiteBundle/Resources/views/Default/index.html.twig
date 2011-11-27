@@ -1,1 +1,33 @@
-Hello {{ name }}!
+{% extends 'ClassCentralSiteBundle::base.html.twig' %}
+{% block customJS %}
+
+    
+     $(document).ready(function() 
+    {         
+        $("#ongoing").tablesorter(); 
+        $("#upcoming").tablesorter();
+    } 
+    ); 
+{% endblock %}
+   
+    
+{%  block content %}
+<div class="hero-unit">
+    <h1>Class Central</h1>
+    <p>Summary of Stanford's online course offerings</p>
+    <!-- <p><a class="btn primary large">Learn more &raquo;</a></p> -->
+    <p>
+        <span class="label notice">Quick Stats</span> <span class="label success">{{stats.courses }} Courses</span>  <span class="label success">{{stats.instructors }} Faculty/Instructors</span> 
+    </p>
+</div>
+
+    
+
+
+<h1>Upcoming courses</h1> 	  
+{% include 'ClassCentralSiteBundle:Default:courses.table.html.twig' with{'offerings':upcoming, 'tableId':'upcoming'} %}
+
+<h1>Ongoing courses</h1> 	  
+{% include 'ClassCentralSiteBundle:Default:courses.table.html.twig' with{'offerings':ongoing,'tableId':'ongoing'} %}
+
+{% endblock %}  
