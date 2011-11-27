@@ -1,61 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Class Central </title>
-    <meta name="description" content="Summary of Stanford's online course offerings">
-    <meta name="author" content="Dhawal Shah">
+    <head>
+        <meta charset="utf-8">
+        <title>Class Central </title>
+        <meta name="description" content="Summary of Stanford's online course offerings">
+        <meta name="author" content="Dhawal Shah">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+        <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
 
-    <!-- Le styles -->  
-    {% stylesheets
+        <!-- Le styles -->  
+        {% stylesheets
         '@ClassCentralSiteBundle/Resources/public/css/*'
-    %}
+        %}
         <link rel="stylesheet" href="{{ asset_url }}" />
-    {% endstylesheets %}
-    
-    {% javascripts
+        {% endstylesheets %}
+
+        {% javascripts
         '@ClassCentralSiteBundle/Resources/public/js/*'
-    %}
+        %}
         <script type="text/javascript" src="{{ asset_url }}"></script>
-    {% endjavascripts %}
-    
-    <script type="text/javascript">
-        {% block customJS %}
-        {% endblock %}
-    </script>
- 
-  </head>
+        {% endjavascripts %}
 
-  <body>
-          
-    <div class="topbar">
-      <div class="fill">
-        <div class="container">
-          <a class="brand" href="#">Class Central</a>
-          <ul class="nav">
-            <li class="active"><a href="#">Home</a></li>           
-          </ul>
+        <script type="text/javascript">
+            {% block customJS %}
+            {% endblock %}
+        </script>
+
+    </head>
+
+    <body>
+
+        <div class="topbar">
+            <div class="fill">
+                <div class="container">
+                    <a class="brand" href="#">Class Central</a>
+                    <ul class="nav">
+                        <li class="active"><a href="#">Home</a></li>           
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <div class="container">
+        <div class="container">
 
-      {%  block content %}   
-      <hr /><hr />
-      {% endblock %}  
-      <footer>
-          {% block footer %}
-               <p>Class Central </p>
-          {% endblock %}
-      </footer>
+            {%  block content %}   
+            <hr /><hr />
+            {% endblock %}  
+            <footer>
+                {% block footer %}
+                <p><a href="mailto:contact@class-central.com">contact@class-central.com</a> |                                        
+                    <a href="https://github.com/dhawalhshah/class-central"
+   class="gitforked-button gitforked-forks gitforked-watchers">Fork</a>
 
-    </div> <!-- /container -->
+                </p>
+                {% endblock %}
+            </footer>
 
-  </body>
+        </div> <!-- /container -->
+<script src="http://gitforked.com/api/1.1/button.js" type="text/javascript"></script>
+    </body>
 </html>
