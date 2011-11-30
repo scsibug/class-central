@@ -22,6 +22,7 @@ twig:
     strict_variables: %kernel.debug%
     globals:
       addthis_pubid : %addthis_pubid%
+      ganalytics_id : %ganalytics_id%
 
 # Assetic Configuration
 assetic:

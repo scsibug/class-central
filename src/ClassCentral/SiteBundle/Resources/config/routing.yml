@@ -2,3 +2,6 @@ ClassCentralSiteBundle_homepage:
     pattern:  /
     defaults: { _controller: ClassCentralSiteBundle:Default:index }
     
+ClassCentralSiteBundle_admin:
+    resource: "@ClassCentralSiteBundle/Resources/config/routing_admin.yml"
+    prefix: /admin    

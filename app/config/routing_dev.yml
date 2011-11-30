@@ -1,12 +1,3 @@
-#_demo_secured:
-#    resource: "@AcmeDemoBundle/Controller/SecuredController.php"
-#    type:     annotation
-#
-#_demo:
-#    resource: "@AcmeDemoBundle/Controller/DemoController.php"
-#    type:     annotation
-#    prefix:   /demo
-
 _assetic:
     resource: .
     type:     assetic
@@ -24,8 +15,4 @@ _configurator:
     prefix:   /_configurator
 
 _main:
-    resource: routing.yml
-    
-ClassCentralSiteBundle_dev:
-    resource: "@ClassCentralSiteBundle/Resources/config/routing_dev.yml"
-    prefix: /admin
+    resource: routing.yml    
