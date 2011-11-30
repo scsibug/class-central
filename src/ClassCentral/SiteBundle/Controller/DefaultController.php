@@ -34,7 +34,7 @@ class DefaultController extends Controller {
         $stats['courses'] = $this->getDoctrine()->getEntityManager()->createQuery('SELECT COUNT(c.id) FROM ClassCentralSiteBundle:Course c')->getSingleScalarResult();
         $stats['instructors'] = $this->getDoctrine()->getEntityManager()->createQuery('SELECT COUNT(i.id) FROM ClassCentralSiteBundle:Instructor i')->getSingleScalarResult();
                 
-        return $this->render('ClassCentralSiteBundle:Default:index.html.twig', array('ongoing' => $ongoing,'upcoming'=>$upcoming, 'stats' => $stats,'social'=>true));
+        return $this->render('ClassCentralSiteBundle:Default:index.html.twig', array('ongoing' => $ongoing,'upcoming'=>$upcoming, 'stats' => $stats,'home'=>true));
     }
 
 }

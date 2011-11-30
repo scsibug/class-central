@@ -30,7 +30,7 @@
         </script>
 
 
-        {% if app.environment == 'prod' %}
+        {% if app.environment == 'prod' and home is defined %}
         <!-- Including google analytics. The parameter ganalytics_id must be set in parameters.ini -->
         <script type="text/javascript">
 
@@ -57,10 +57,9 @@
                     <ul class="nav">
                         <li class="active"><a href="#">Home</a></li>           
                     </ul>
-                    {% if social is defined %}
+                    {% if home is defined %}
                     <ul class="nav secondary-nav">
                         <li>
-
                             <div id='addThisButton'>
                                 <!-- AddThis Button BEGIN -->
                                 <div class="addthis_toolbox addthis_default_style ">
