@@ -2474,3 +2474,11 @@ footer p{
     text-align: center;  
     vertical-align: bottom;
 }
+
+div.addthis_toolbox addthis_default_style {
+    visibility: hidden;
+}
+
+#addThisButton{
+     margin-top: 10px;
+}
