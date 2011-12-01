@@ -1,16 +1,27 @@
 <table class="zebra-striped" id='{{ tableId}}'>	 
     <thead>
         <tr>
+             <th></th>
             <th>Course Name</th>
+           
             <th>Instructor(s)</th>
             <th>Stream</th>
-            <th>Start Date</th>			            
+            <th>Start Date</th>	
+            
         </tr>
     </thead>
     <tbody>
         {% for offering in offerings %}
         <tr>
+             <td>
+                 {% if offering.getVideoIntro() is not null %}
+                 <a href="{{ offering.getVideoIntro() }}" rel="intro" title=" {{ offering.getCourse().getName()}} video description">
+                <img src="{{ asset('bundles/classcentralsite/images/youtube.png') }}" alt="" height="32" width="32"/>
+                </a>              
+                {% endif %}
+            </td>
             <td><a href="{{ offering.getUrl() }}">{{ offering.getCourse().getName()}}</a></td>
+           
             <td>
                     {% set i = 0 %}   
                     {% for instructor in offering.getCourse().getInstructors() %}
@@ -24,8 +35,8 @@
               
             </td>
             <td> {{ offering.getCourse().getStream().getName() }} </td>
-            <td>{{ offering.getFormattedStartDate() }}</td>
-
+            <td data-timestamp="{{ offering.getStartTimestamp }}">{{ offering.getFormattedStartDate() }}</td>
+            
         </tr>
         {% endfor %}
 

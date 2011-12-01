@@ -1,11 +1,19 @@
 {% extends 'ClassCentralSiteBundle::base.html.twig' %}
-{% block customJS %}
-
-    
+{% block customJS %}    
+     var textExtractor = function(node){ 
+        timestamp = node.getAttributeNode("data-timestamp");                      
+        if( timestamp != undefined ){  
+            
+            return timestamp.value;
+        }
+        else{
+            return node.childNodes[0].innerHTML;
+        }        
+     }
      $(document).ready(function() 
-    {         
-        $("#ongoing").tablesorter(); 
-        $("#upcoming").tablesorter();
+    {                 
+        $("#ongoing").tablesorter( {textExtraction: textExtractor}); 
+        $("#upcoming").tablesorter({textExtraction: textExtractor} );
     } 
     ); 
 {% endblock %}

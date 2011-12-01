@@ -15,6 +15,7 @@ class OfferingType extends AbstractType
             ->add('exactDatesKnow')
             ->add('course',null,array('property'=>'name'))   
             ->add('url')    
+            ->add('videoIntro')      
         ;
     }
 

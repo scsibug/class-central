@@ -28,9 +28,11 @@ ClassCentral\SiteBundle\Entity\Offering:
       type: datetime
       nullable: false   
     url:
+      type: text 
+    videoIntro:
       type: text
-    video_intro:
-      type: text
+      nullable: true
+      column: video_intro  
   manyToOne:
     course:
       targetEntity: Course

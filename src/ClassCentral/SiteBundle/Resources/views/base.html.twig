@@ -19,7 +19,9 @@
         {% endstylesheets %}
 
         {% javascripts
-        '@ClassCentralSiteBundle/Resources/public/js/*'
+        '@ClassCentralSiteBundle/Resources/public/js/jquery-1.7.min.js'
+        '@ClassCentralSiteBundle/Resources/public/js/jquery.prettyPhoto.js'
+        '@ClassCentralSiteBundle/Resources/public/js/jquery.tablesorter.min.js'
         %}
         <script type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}
@@ -94,5 +96,16 @@
 
         </div> <!-- /container -->
         <script src="http://gitforked.com/api/1.1/button.js" type="text/javascript"></script>
+        <!-- Jquery Lightbox plugin -->
+        <script type="text/javascript" charset="utf-8">
+            $(document).ready(function(){
+                $("a[rel^='intro']").prettyPhoto({
+                    social_tools : false,
+                    show_title: false,
+                    default_width: 640,
+                    default_height:480
+                });
+            });
+        </script>
     </body>
 </html>
