@@ -32,10 +32,10 @@
     
 
 
-<h1>Upcoming courses</h1> 	  
+<h1>Upcoming courses ({{ upcoming|length }})</h1> 	  
 {% include 'ClassCentralSiteBundle:Default:courses.table.html.twig' with{'offerings':upcoming, 'tableId':'upcoming'} %}
 
-<h1>Ongoing courses</h1> 	  
+<h1>Ongoing courses ({{ ongoing|length }})</h1> 	  
 {% include 'ClassCentralSiteBundle:Default:courses.table.html.twig' with{'offerings':ongoing,'tableId':'ongoing'} %}
 
 {% endblock %}  
