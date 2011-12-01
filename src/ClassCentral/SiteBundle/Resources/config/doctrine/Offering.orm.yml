@@ -29,6 +29,8 @@ ClassCentral\SiteBundle\Entity\Offering:
       nullable: false   
     url:
       type: text
+    video_intro:
+      type: text
   manyToOne:
     course:
       targetEntity: Course

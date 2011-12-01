@@ -50,6 +50,13 @@ class Offering {
      * @var string $url
      */
     private $url;
+    
+    
+    /**
+     *
+     * @var string $videoIntro
+     */
+    private $videoIntro;
 
     /**
      * Get id
@@ -75,7 +82,11 @@ class Offering {
      * @return date 
      */
     public function getStartDate() {
-        return $this->startDate;
+        return $this->startDate ;
+    }
+    
+    public function getStartTimestamp(){
+        return strval($this->startDate->getTimestamp());
     }
 
     /**
@@ -189,5 +200,14 @@ class Offering {
     public function setUrl($url){
         $this->url = $url;
     }
+    
+    public function getVideoIntro(){
+        return $this->videoIntro;
+    }
+    
+    public function setVideoIntro($videoIntro){
+        $this->videoIntro = $videoIntro;
+    }
+    
 
 }
