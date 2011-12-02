@@ -13,7 +13,7 @@
     <tbody>
         {% for offering in offerings %}
         <tr>
-             <td>
+            <td style="padding: 5px 0px 0px 0px">
                  {% if offering.getVideoIntro() is not null %}
                  <a href="{{ offering.getVideoIntro() }}" rel="intro" title=" {{ offering.getCourse().getName()}} video description">
                 <img src="{{ asset('bundles/classcentralsite/images/youtube.png') }}" alt="" height="32" width="32"/>
