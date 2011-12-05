@@ -6,7 +6,7 @@ use Doctrine\DBAL\Migrations\AbstractMigration,
     Doctrine\DBAL\Schema\Schema;
 
 /**
- * Adding a column gor youtube videos
+ * Adding a column for youtube videos
  */
 class Version20111201043223 extends AbstractMigration
 {

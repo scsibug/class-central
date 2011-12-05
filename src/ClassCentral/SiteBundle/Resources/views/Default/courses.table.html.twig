@@ -7,6 +7,7 @@
             <th>Instructor(s)</th>
             <th>Stream</th>
             <th>Start Date</th>	
+            <th>Length</th>
             
         </tr>
     </thead>
@@ -36,6 +37,13 @@
             </td>
             <td> {{ offering.getCourse().getStream().getName() }} </td>
             <td data-timestamp="{{ offering.getStartTimestamp }}">{{ offering.getFormattedStartDate() }}</td>
+            <td> 
+                {% if offering.getLength() is not null %}
+                    {{ offering.getLength() }} weeks
+                {% else %}
+                    NA
+                {% endif %}
+            </td>
             
         </tr>
         {% endfor %}

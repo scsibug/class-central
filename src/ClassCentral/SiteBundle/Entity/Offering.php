@@ -57,6 +57,12 @@ class Offering {
      * @var string $videoIntro
      */
     private $videoIntro;
+    
+    /**
+     * 
+     * @var integer length
+     */
+    private $length;
 
     /**
      * Get id
@@ -208,6 +214,15 @@ class Offering {
     public function setVideoIntro($videoIntro){
         $this->videoIntro = $videoIntro;
     }
+    
+    public function getLength(){
+        return $this->length;                
+    }
+    
+    public function setLength($length){
+        $this->length = $length;
+    }
+    
     
 
 }
