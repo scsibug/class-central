@@ -1,13 +1,11 @@
 {% extends 'ClassCentralSiteBundle::base.html.twig' %}
 {% block customJS %}    
      var textExtractor = function(node){ 
-        timestamp = node.getAttributeNode("data-timestamp");                      
+        timestamp = node.getAttributeNode("data-timestamp");
         if( timestamp != undefined ){  
-            
             return timestamp.value;
-        }
-        else{
-            return node.childNodes[0].innerHTML;
+        } else {
+            return $(node).text()
         }        
      }
      $(document).ready(function() 
